@@ -11,10 +11,20 @@ export const BookShelfContextProvider = ({ children }) => {
     {
       allBooks: BookBazar,
       BookCategoryArray: BookCategory,
-      searchedSBooks: BookBazar,
+
+      search: "",
     }
   );
-  const { allBooks, BookCategoryArray, searchedSBooks } = bookShelfState;
+  const { allBooks, BookCategoryArray, search } = bookShelfState;
+
+  console.log(search);
+
+  const filteredBooks =
+    search.length > 0
+      ? allBooks.filter((item) =>
+          item.name.toLowerCase().includes(search.toLowerCase(item.name))
+        )
+      : allBooks;
 
   return (
     <BookShelfContext.Provider
@@ -22,7 +32,7 @@ export const BookShelfContextProvider = ({ children }) => {
         allBooks,
         BookCategoryArray,
         dispatchBookshelfState,
-        searchedSBooks,
+        filteredBooks,
       }}
     >
       {children}
