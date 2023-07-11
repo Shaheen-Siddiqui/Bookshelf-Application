@@ -23,7 +23,7 @@ export const BookCantrolar = ({
               setIsControllerOpen(false);
             }}
             className="list-group-item"
-            id={bookCategory == categories ? "list-color" : "point"}
+            id={bookCategory === categories ? "list-color" : "point"}
           >
             {categories}
           </li>

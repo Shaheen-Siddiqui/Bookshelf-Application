@@ -24,7 +24,7 @@ export const BookListing = ({ notShow }) => {
             <h1 className="genre-margin">{genre}</h1>
             <center className="flex-case">
               {filteredBooks
-                .filter((item) => item.category == genre)
+                .filter((item) => item.category === genre)
                 .map((bookies, index) => {
                   return <Books key={index} {...bookies} />;
                 })}
