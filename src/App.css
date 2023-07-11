@@ -24,14 +24,66 @@
   color: white;
 }
 
+.genre-margin {
+  margin: 2rem;
+  font-family: cursive;
+}
+
+#point {
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid gray;
+
+}
+
+#list-color {
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid gray;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.flex-case {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-group {
+  background-color: #282c34;
+  position: relative;
+  z-index: 1;
+  align-items: stretch;
+  padding: 0;
+
+}
+
+.card {
+  border: solid;
+  height: 22rem;
+  width: 18rem;
+}
+
+.ul-style {
+  border: 1px solid pink;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+  color: white;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
